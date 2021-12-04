@@ -5,15 +5,19 @@ The purpose of this analysis was to help the management team at Pewlett-Hackard 
 
 ## Results:
 1) The first table we created incorporated employee number, the employee's first amd last name, title amd employment start and end dates from two previously configured tables - Employees and Titles. This data was then filtered to retrieve employees born between 1952 and 1955 to show eligibile retirees by title, orderd by employee number. Retirees by Title (showing first ten entries):
+
 ![Retirement_Titles_Image](https://github.com/jmueller187/Pewlett-Hackard-Analysis/blob/main/Resources/Retirement_Titles_Image.png)
 
 2) Because some employees had switched roles over the years of their employment the first table contained duplicate employee entries with multiple titles. The second table we  created eliminated the duplicate entires to show only the most recent title of each employee. Retirees by most recent title (showing first ten entries):
+
 ![Unique_Title_Image](https://github.com/jmueller187/Pewlett-Hackard-Analysis/blob/main/Resources/Unique_Titles_Image.png)
 
 3) In order to provide management with a count of employees in the "Silver Tsunami", the third table we created showed the total number of employees ready to retire broken down by their job title. Total counts of retirees by title:
+
 ![Retiring_Titles_Image](https://github.com/jmueller187/Pewlett-Hackard-Analysis/blob/main/Resources/Retiring_Titles_Image.png)
 
 4) The final table we created included the employees eligible for the company's proposed mentorship program. This program would be used by management to enlist those experienced and successfull retiring employees to work as a mentor to the incoming new hires on a part-time basis. Employees eligible for mentorship program (showing first ten entries):
+
 ![Mentorship_Eligibility_Image](https://github.com/jmueller187/Pewlett-Hackard-Analysis/blob/main/Resources/Mentorship_Eligibility_Image.png)
 
 
