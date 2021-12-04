@@ -46,12 +46,12 @@ This would result in just under 26,000 employees that could be part of the mento
 A second option would be to adjust the range of employee birthdates to include dates from 1960 to 1965 as included in the following query:
 
 SELECT DISTINCT ON (e.emp_no) e.emp_no,
-e.first_name,
-e.last_name,
-e.birth_date,
-de.from_date,
-de.to_date,
-t.title
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date,
+	t.title
 INTO mentorship_eligibility_expanded
 FROM employees AS e
 INNER JOIN dept_emp AS de
