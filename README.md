@@ -29,13 +29,13 @@ Our third summary showed that if all the eligible employees took their retiremen
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 Our fourth summary showed us that a total of 1.549 employees would be eligible for the mentorship program. This is a significantly smaller number compared to the potential number of positions that may become available. If all eligible employees retire around the same time, this would result in about one mentor per 58 new hires coming into the company. One was to increase the number of mentors would be to adjust the range of employee birthdates to include a range from 1960 to 1965 as included in the following query:
 
-SELECT DISTINCT ON (e.emp_no) e.emp_no,/n
-	e.first_name,/n
-	e.last_name,/n
-	e.birth_date,/n
-	de.from_date,/n
-	de.to_date,/n
-	t.title/n
+SELECT DISTINCT ON (e.emp_no) e.emp_no,/r
+	e.first_name,/r
+	e.last_name,/r
+	e.birth_date,/r
+	de.from_date,/r
+	de.to_date,/r
+	t.title/r
 INTO mentorship_eligibility_expanded
 FROM employees AS e
 INNER JOIN dept_emp AS de
