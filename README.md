@@ -27,7 +27,23 @@ The purpose of this analysis was to help the management team at Pewlett-Hackard 
 Our third summary showed that if all the eligible employees took their retirement, there would be a total of 90,398 positions that will need to be filled.
 
 ### Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-Our fourth summary showed us that a total of 1.549 employees would be eligible for the mentorship program. This is a significantly smaller number compared to the potential number of positions that may become available. If all eligible employees retire around the same time, this would result in about one mentor per 58 new hires coming into the company. One was to increase the number of mentors would be to adjust the range of employee birthdates to include a range from 1960 to 1965 as included in the following query:
+Our fourth summary showed us that a total of 1.549 employees would be eligible for the mentorship program. This is a significantly smaller number compared to the potential number of positions that may become available. If all eligible employees retire around the same time, this would result in about one mentor per 58 new hires coming into the company.
+
+One option to increase the number of potential mentors could involve including employees from additional departments such as Production and Research along with Sales and Development as shown in the following query:
+
+SELECT ri.emp_no,
+	ri.first_name,
+	ri.last_name,
+	di.dept_name
+INTO retirees_sales_dlvp_prod_res
+FROM retirement_info AS ri
+	INNER JOIN dept_info AS di
+		ON (ri.emp_no = di.emp_no)
+WHERE dept_name IN ('Sales', 'Development', 'Production', 'Research');
+
+This would result in just under 26,000 employees that could be part of the mentorship program.
+
+A second option would be to adjust the range of employee birthdates to include dates from 1960 to 1965 as included in the following query:
 
 SELECT DISTINCT ON (e.emp_no) e.emp_no,
 	e.first_name,
