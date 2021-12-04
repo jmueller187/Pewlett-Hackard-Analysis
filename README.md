@@ -30,6 +30,7 @@ Our third summary showed that if all the eligible employees took their retiremen
 Our fourth summary showed us that a total of 1.549 employees would be eligible for the mentorship program. This is a significantly smaller number compared to the potential number of positions that may become available. If all eligible employees retire around the same time, this would result in about one mentor per 58 new hires coming into the company.
 
 One option to increase the number of potential mentors could involve including employees from additional departments such as Production and Research along with Sales and Development as shown in the following query:
+```
 
 SELECT ri.emp_no,
 	ri.first_name,
@@ -40,10 +41,12 @@ FROM retirement_info AS ri
 	INNER JOIN dept_info AS di
 		ON (ri.emp_no = di.emp_no)
 WHERE dept_name IN ('Sales', 'Development', 'Production', 'Research');
+```
 
 This would result in just under 26,000 employees that could be part of the mentorship program.
 
 A second option would be to adjust the range of employee birthdates to include dates from 1960 to 1965 as included in the following query:
+```
 
 SELECT DISTINCT ON (e.emp_no) e.emp_no,
 	e.first_name,
@@ -61,5 +64,6 @@ ON (e.emp_no = t.emp_no)
 WHERE (de.to_date = '9999-01-01')
 AND (e.birth_date BETWEEN '1960-01-01' AND '1965-12-31')
 ORDER BY emp_no;
+```
 
 This would increase the number of potential mentors to over 117,000 people.
