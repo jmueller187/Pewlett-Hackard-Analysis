@@ -4,7 +4,7 @@
 The purpose of this analysis was to help the management team at Pewlett-Hackard prepare for the "Silver Tsunami", as a large portion of their workforce prepares to move towards retirement. We were able to provide data on the number of retiring employees in each division based on their title as well as identify employees who would be eligible to participate in the company's proposed mentorship program to help new employees transision successfully into their positions.
 
 ## Results:
-1) The first table we created incorporated employee number, the employee's first amd last name, title amd employment start and end dates from two previously configured tables - Employees and Titles. This data was then filtered to retrieve employees born between 1952 and 1955 to show eligibile retirees by title, orderd by employee number. Retirees by Title (showing first ten entries):
+1) The first table we created incorporated employee number, the employee's first and last name, title amd employment start and end dates from two previously configured tables - Employees and Titles. This data was then filtered to retrieve employees born between 1952 and 1955 to show eligibile retirees by title, orderd by employee number. Retirees by Title (showing first ten entries):
 
 ![Retirement_Titles_Image](https://github.com/jmueller187/Pewlett-Hackard-Analysis/blob/main/Resources/Retirement_Titles_Image.png)
 
